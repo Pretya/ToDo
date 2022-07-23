@@ -1,0 +1,219 @@
+* {  padding: 0; margin: 0; border: 0;}
+*,*::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active {outline: none;}
+a:focus,a:active {outline: none;}
+header,footer,nav {display: block;}
+h1,h2,h3,h4,h5,h6 {font-size: inherit; font-weight: 400;}
+input,button,textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding: 0; border: 0;}
+a,a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+html,body {
+width: 100%;
+height: 100%;
+font-size: 100%;
+line-height: 1;
+font-size: 14px;
+-ms-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: 'Titillium Web', sans-serif;
+	color: white;
+	height: 1500px;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	height: 100%;
+	background: linear-gradient(45deg, tomato, slateblue, violet);
+}
+.title {
+	font-family: 'Titillium Web', sans-serif;
+	letter-spacing: .25em;
+	font-weight: 600;
+	margin: 30px 0;
+	font-size: calc(var(--index) * 1.55);	
+	text-decoration: underline;
+}
+
+.conteiner1 {
+	width: 80vw;
+	min-height: 400px;
+	margin-bottom: 30px;
+	background: transparent;
+}
+.conteiner1 ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+}
+
+.conteiner1 li {
+	min-width: 18%;
+	border: 1px solid rgb(31, 29, 29);
+	color: white;
+	background-color: #000;
+	box-shadow: 0 0 10px #000;
+	border-radius: 5px;
+	min-height: 170px;
+	overflow: hidden;
+}
+.conteiner1 .item__list {
+	max-width: 250px;
+}
+.item__list {
+	margin: 10px 10px;
+	padding: 10px;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	z-index: 1;
+}
+.item__text {
+	
+	font-size: calc(var(--index) * .9);
+	color: rgb(251, 248, 248);
+}
+.button {
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	z-index: 2;
+}
+.btn {
+	width: calc(var(--index) * 3);
+	height: calc(var(--index) * .8);
+	margin-left: 10px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 15px #fff;
+}
+.btn i {
+	pointer-events: none;
+}
+.btn:hover {
+	filter: contrast(120%);
+}
+
+.conteiner2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 450px;
+	height: 100px;
+	background-color: rgb(161 161 161);
+	border-radius: 25px;
+	box-shadow: 0 0 10px rgb(41, 40, 40);
+}
+.form__title {
+	letter-spacing: .2em;
+}
+.form__input {
+	display: flex;
+	margin-top: 10px;
+}
+form input {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+	padding: 0 20px;
+	margin-right: 10px;
+	width: 250px;
+	height: 33px;
+	border: 2px solid;
+	border-image: linear-gradient(
+		tomato,
+		slateblue,
+		violet,
+		#1c64ff) 1;
+		animation: rotate 2.5s ease-in infinite;
+}
+@keyframes rotate {
+	50%{
+		border-image: linear-gradient(
+			360deg,
+			tomato,
+			slateblue,
+			violet,
+			#1c64ff) 1;
+	}
+	
+}
+form button {
+	padding: 5px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #59a6e38c;
+	background-image: linear-gradient(
+		-60deg,
+		transparent, transparent 40%,
+		#ffffff44 40%, #ffffff44 60%,
+		transparent 60%, transparent 100% 
+	);
+	background-size: 200% 100%;
+	background-repeat: no-repeat;
+	background-position-x: 150%;
+	box-shadow: 4px 4px 5px #000;
+	letter-spacing: .1em;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+	transition: transform .9s, box-shadow .9s;
+	
+}
+form button:active {
+	transform: translateY(4px) translateX(4px);
+	box-shadow: 0px 0px 0px #000;
+	
+}
+form button:hover {
+	background-position-x: -150%;
+	filter: contrast(120%);
+	transition: background-position-x 600ms;
+}
+.none {
+	display: none !important;
+}
+
+#emptyList {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .5em;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	box-shadow: 0 0 10px #000;
+}
+
+.fa-check {
+	color: green;
+}
+.fa-xmark {
+	color: red;
+}
+
+.line--done {
+	text-decoration: line-through;
+	opacity: .8;
+}
